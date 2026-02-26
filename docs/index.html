@@ -31,30 +31,33 @@
     label.opt.incorrect{background:rgba(224,75,75,0.06);border-color:rgba(224,75,75,0.12)}
     .small{font-size:13px;color:#475569}
     footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
-    @media(max-width:640px){.wrap{margin:8px;padding:12px}.progress{width:140px}}
+    .sticky-header { position: sticky; top: 0; background: #fff; z-index: 100; margin: -16px -16px 12px -16px; padding: 16px 16px 12px 16px; border-bottom: 1px solid #eef2f6; border-radius: 10px 10px 0 0; box-shadow: 0 4px 6px -4px rgba(0,0,0,0.05); }
+    @media(max-width:640px){.wrap{margin:8px;padding:12px}.progress{width:140px} .sticky-header{margin: -12px -12px 12px -12px; padding: 12px 12px 12px 12px;}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div>
-        <h1>Quiz — Stage-based (10 per stage)</h1>
-        <div class="meta">선택 후 "Check"를 눌러 정답을 확인하세요. 저장/불러오기 지원.</div>
-      </div>
-      <div class="stageInfo">
-        <div class="meta">Stage <span id="stageNumber">1</span> / <span id="stageTotal">1</span></div>
-        <div class="progress" title="progress"><i id="progressBar"></i></div>
-      </div>
-    </header>
-    <div style="max-width:980px;margin:6px auto 0;padding:0 16px;color:#64748b;font-size:13px">퀴즈 항목: <span id="quizCount">-</span> — 스테이지 수: <span id="stageCount">-</span></div>
+    <div class="sticky-header">
+      <header>
+        <div>
+          <h1>Quiz — Stage-based (10 per stage)</h1>
+          <div class="meta">선택 후 "Check"를 눌러 정답을 확인하세요. 저장/불러오기 지원.</div>
+        </div>
+        <div class="stageInfo">
+          <div class="meta">Stage <span id="stageNumber">1</span> / <span id="stageTotal">1</span></div>
+          <div class="progress" title="progress"><i id="progressBar"></i></div>
+        </div>
+      </header>
+      <div style="max-width:980px;margin:6px auto 0;color:#64748b;font-size:13px">퀴즈 항목: <span id="quizCount">-</span> — 스테이지 수: <span id="stageCount">-</span></div>
 
-    <div class="controls">
-      <button id="prevBtn" class="secondary">이전</button>
-      <button id="nextBtn" class="secondary">다음</button>
-      <button id="checkBtn">Check</button>
-      <button id="saveBtn" class="ghost">저장</button>
-      <button id="loadBtn" class="ghost">불러오기</button>
-      <button id="resetBtn" class="ghost">스테이지 리셋</button>
+      <div class="controls">
+        <button id="prevBtn" class="secondary">이전</button>
+        <button id="nextBtn" class="secondary">다음</button>
+        <button id="checkBtn">Check</button>
+        <button id="saveBtn" class="ghost">저장</button>
+        <button id="loadBtn" class="ghost">불러오기</button>
+        <button id="resetBtn" class="ghost">스테이지 리셋</button>
+      </div>
     </div>
 
     <div id="questions"></div>
