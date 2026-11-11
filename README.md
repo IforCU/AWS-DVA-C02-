@@ -1542,9 +1542,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A deployment package uses the AWS CLI to copy files into any S3 bucket in the account, using access keys stored in environment variables. The package is running on EC2 instances, and the instances have been modified to run with an assumed IAM role and a more restrictive policy that allows access to only one bucket. After the change, the Developer logs into the host and still has the ability to write into all of the S3 buckets in that account. What is the MOST likely cause of this situation?
 
 - [ ] An IAM inline policy is being used on the IAM role.
-- [x] An IAM managed policy is being used on the IAM role.
+- [ ] An IAM managed policy is being used on the IAM role.
 - [ ] The AWS CLI is corrupt and needs to be reinstalled.
-- [ ] The AWS credential provider looks for instance profile credentials last.
+- [x] The AWS credential provider looks for instance profile credentials last.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2263,9 +2263,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A company has implemented AWS CodePipeline to automate its release pipelines. The Development team is writing an AWS Lambda function what will send notifications for state changes of each of the actions in the stages. Which steps must be taken to associate the Lambda function with the event source?
 
 - [ ] Create a trigger that invokes the Lambda function from the Lambda console by selecting CodePipeline as the event source.
-- [x] Create an event trigger and specify the Lambda function from the CodePipeline console.
+- [ ] Create an event trigger and specify the Lambda function from the CodePipeline console.
 - [ ] Create an Amazon CloudWatch alarm that monitors status changes in Code Pipeline and triggers the Lambda function.
-- [ ] Create an Amazon CloudWatch Events rule that uses CodePipeline as an event source.
+- [x] Create an Amazon CloudWatch Events rule that uses CodePipeline as an event source.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2420,9 +2420,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A company is developing a web application that allows its employees to upload a profile picture to a private Amazon S3 bucket. There is no size limit for the profile pictures, which should be displayed every time an employee logs in. For security reasons, the pictures cannot be publicly accessible. What is a viable long-term solution for this scenario?
 
 - [ ] Generate a presigned URL when a picture is uploaded. Save the URL in an Amazon DynamoDB table. Return the URL to the browser when the employee logs in.
-- [x] Save the picture's S3 key in an Amazon DynamoDB table. Create an Amazon S3 VPC endpoint to allow the employees to download pictures once they log in.
+- [ ] Save the picture's S3 key in an Amazon DynamoDB table. Create an Amazon S3 VPC endpoint to allow the employees to download pictures once they log in.
 - [ ] Encode a picture using base64. Save the base64 string in an Amazon DB table. Allow the browser to retrieve the string and convert it to a picture.
-- [ ] Save the picture's S3 key in an Amazon DynamoDB table. Use a function to generate a presigned URL every time an employee logs in. Return the URL to the browser.
+- [x] Save the picture's S3 key in an Amazon DynamoDB table. Use a function to generate a presigned URL every time an employee logs in. Return the URL to the browser.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3050,8 +3050,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A team of Developers must migrate an application running inside an AWS Elastic Beanstalk environment from a Classic Load Balancer to an Application Load Balancer. Which steps should be taken to accomplish the task using the AWS Management Console?
 
-- [x] 1. Update the application code in the existing deployment. 2. Select a new load balancer type before running the deployment. 3. Deploy the new version of the application code to the environment.
-- [ ] 1. Create a new environment with the same configurations except for the load balancer type. 2. Deploy the same application version as used in the original environment. 3. Run the `swap-environment-cnames` action.
+- [ ] 1. Update the application code in the existing deployment. 2. Select a new load balancer type before running the deployment. 3. Deploy the new version of the application code to the environment.
+- [x] 1. Create a new environment with the same configurations except for the load balancer type. 2. Deploy the same application version as used in the original environment. 3. Run the `swap-environment-cnames` action.
 - [ ] 1. Clone the existing environment, changing the associated load balancer type. 2. Deploy the same application version as used in the original environment. 3. Run the `swap-environment-cnames` action.
 - [ ] 1. Edit the environment definitions in the existing deployment. 2. Change the associated load balancer type according to the requirements. 3. Rebuild the environment with the new load balancer type.
 
